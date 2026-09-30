@@ -1,0 +1,30 @@
+{
+  "name": "chutshey-gari",
+  "version": "0.1.0",
+  "description": "Non-blocking reminders and bounded polling for Pi agents",
+  "type": "module",
+  "keywords": ["pi-package"],
+  "files": ["index.ts", "extension.ts", "reminder-manager.ts"],
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --project tsconfig.json"
+  },
+  "pi": {
+    "extensions": ["./index.ts"]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@types/node": "^24.0.0",
+    "typebox": "*",
+    "typescript": "^6.0.0"
+  }
+}
